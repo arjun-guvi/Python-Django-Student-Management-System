@@ -10,7 +10,7 @@ def student_list(request):
 
 def student_detail(request, pk):
     student = get_object_or_404(Student, pk=pk)
-    return render(request, 'students/student_detail.html', {'student': student})
+    return render(request, 'students/student_det.html', {'student': student})
 
 def student_create(request):
     if request.method == 'POST':
@@ -34,7 +34,7 @@ def student_update(request, pk):
         student.date_of_birth = request.POST['date_of_birth']
         student.enrollment_date = request.POST['enrollment_date']
         student.save()
-        return redirect('student_list')
+        return redirect('stunt_list')
     return render(request, 'students/student_form.html', {'student': student})
 
 def student_delete(request, pk):
