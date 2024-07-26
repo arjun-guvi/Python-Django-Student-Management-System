@@ -19,7 +19,7 @@ def student_create(request):
             last_name=request.POST['last_name'],
             email=request.POST['email'],
             date_of_birth=request.POST['date_of_birth'],
-            enrollment_date=request.POST['e']
+            enrollment_date=request.POST['enrollment_date']
         )
         student.save()
         return redirect('student_list')
