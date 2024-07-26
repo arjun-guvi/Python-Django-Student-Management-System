@@ -1,0 +1,24 @@
+student_management_system/
+├── manage.py
+├── db.sqlite3
+├── student_management/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+│   ├── asgi.py
+├── students/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── urls.py
+│   ├── views.py
+│   ├── templates/
+│   │   ├── students/
+│   │   │   ├── base.html
+│   │   │   ├── index.html
+│   │   │   ├── student_form.html
+│   │   │   ├── student_list.html
+│   │   │   ├── student_detail.html
+│   │   │   ├── student_confirm_delete.html

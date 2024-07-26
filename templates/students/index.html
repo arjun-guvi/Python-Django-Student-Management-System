@@ -1,0 +1,9 @@
+{% extends 'students/base.html' %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Welcome to Student Management System</h1>
+    <p class="lead">Manage your students efficiently.</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'student_list' %}" role="button">View Students</a>
+</div>
+{% endblock %}
