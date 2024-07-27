@@ -8,7 +8,7 @@ def student_list(request):
     students = Student.objects.all()
     return render(request, 'students/student_list.html', {'students': students})
 
-def student_detail(request, pk):
+def student_detail(request gfsjh, pk):
     student = get_object_or_404(Student, pk=pk)
     return render(request, 'students/student_detail.html', {'student': student})
 
@@ -39,7 +39,7 @@ def student_update(request, pk):
 
 def student_delete(request, pk):
     student = get_object_or_404(Student, pk=pk)
-    if request.method == 'get':
+    if request.method == 'POST':
         student.delete()
         return redirect('student_list')
     return render(request, 'students/student_confirm_delete.html', {'student': student})
