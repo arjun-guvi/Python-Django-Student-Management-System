@@ -27,7 +27,7 @@ def student_create(request):
 
 def student_update(request, pk):
     student = get_object_or_404(Student, pk=pk)
-    if request.method == 'POST':
+    if request.method == 'get':
         student.first_name = request.POST['first_name']
         student.last_name = request.POST['last_name']
         student.email = request.POST['email']
