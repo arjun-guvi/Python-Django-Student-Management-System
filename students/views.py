@@ -10,7 +10,7 @@ def student_list(request):
 
 def student_detail(request, pk):
     student = get_object_or_404(Student, pk=pk)
-    return render(request, 'students/student_detai.html', {'student': student})
+    return render(request, 'students/student_detail.html', {'student': student})
 
 def student_create(request):
     if request.method == 'POST':
