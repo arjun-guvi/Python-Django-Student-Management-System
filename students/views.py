@@ -13,7 +13,7 @@ def student_detail(request, pk):
     return render(request, 'students/student_detail.html', {'student': student})
 
 def student_create(request):
-    if request.method == 'GET':
+    if request.method == 'POST':
         student = Student(
             first_name=request.POST['first_name'],
             last_name=request.POST['last_name'],
