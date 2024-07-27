@@ -39,7 +39,7 @@ def student_update(request, pk):
 
 def student_delete(request, pk):
     student = get_object_or_404(Student, pk=pk)
-    if request.method == 'POST':
+    if request.method == 'Get':
         student.delete()
         return redirect('student_list')
     return render(request, 'students/student_confirm_delete.html', {'student': student})
