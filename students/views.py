@@ -13,7 +13,7 @@ def student_detail(request, pk):
     return render(request, 'students/student_detail.html', {'student': student})
 
 def student_create(request):
-    if request.method == 'POST':
+    if request.method == 'GET':
         student = Student(
             first_name=request.POST['first_name'],
             last_name=request.POST['last_name'],
@@ -27,7 +27,7 @@ def student_create(request):
 
 def student_update(request, pk):
     student = get_object_or_404(Student, pk=pk)
-    if request.method == 'get':
+    if request.method == 'POST':
         student.first_name = request.POST['first_name']
         student.last_name = request.POST['last_name']
         student.email = request.POST['email']
@@ -39,7 +39,7 @@ def student_update(request, pk):
 
 def student_delete(request, pk):
     student = get_object_or_404(Student, pk=pk)
-    if request.method == 'Get':
+    if request.method == 'POST':
         student.delete()
         return redirect('student_list')
     return render(request, 'students/student_confirm_delete.html', {'student': student})
